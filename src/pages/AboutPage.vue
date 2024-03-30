@@ -1,6 +1,6 @@
 <template lang="">
     <h2>
-        About Page
+        AboutPage
     </h2>
 </template>
 <script>

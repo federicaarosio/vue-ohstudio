@@ -1,7 +1,15 @@
 <template lang="">
-    <h2>
-        Home
-    </h2>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-6 mx-auto">
+                    <h1 class="text-center custom-fs-big">
+                        A brand and product designer working with clients globally
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
 </template>
 <script>
 export default {

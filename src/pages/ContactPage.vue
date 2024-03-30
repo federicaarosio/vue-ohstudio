@@ -1,6 +1,6 @@
 <template lang="">
     <h2>
-        Contact Page
+        ContactPage
     </h2>
 </template>
 <script>

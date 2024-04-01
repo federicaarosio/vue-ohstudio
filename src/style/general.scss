@@ -49,3 +49,14 @@ body {
     font-size: $fs-big;
     font-weight: 500;
 }
+
+.custom-fs-small {
+    font-size: $fs-small;
+    font-weight: 400;
+}
+
+.custom-badge {
+    padding: 0.35rem 0.9rem;
+    background-color: $primary-color;
+    border-radius: 35px;
+}

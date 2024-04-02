@@ -13,53 +13,52 @@
     </div>
         
     
-    
-    </template>
-    <script>
-    export default {
-        data() {
-            return {
-                linkItems: [
-                    {
-                        label: 'Home',
-                        routeName: 'home'
-                    },
-                    {
-                        label: 'About',
-                        routeName: 'about'
-                    },
-                    {
-                        label: 'Contact',
-                        routeName: 'contact'
-                    },
-                ]
-            }
-        },
-    }
-    </script>
-    
-    <style lang="scss" scoped>
-    @use '../style/partials/variables' as *;
-    
-    .custom-nav {
-        background-color: $primary-color;
+</template>
+<script>
+export default {
+    data() {
+        return {
+            linkItems: [
+                {
+                    label: 'Home',
+                    routeName: 'home'
+                },
+                {
+                    label: 'About',
+                    routeName: 'about'
+                },
+                {
+                    label: 'Contact',
+                    routeName: 'contact'
+                },
+            ]
+        }
+    },
+}
+</script>
+
+<style lang="scss" scoped>
+@use '../style/partials/variables' as *;
+
+.custom-nav {
+    background-color: $primary-color;
+    border-radius: 35px;
+    padding: 0.9rem 0.25rem;
+
+    .custom-menu-item {
+        // background-color: $primary-color;
+        text-decoration: none;
+        color: $text-color;
+        font-weight: 500;
+        padding: 0.8rem 1.6rem;
         border-radius: 35px;
-        padding: 0.9rem 0.25rem;
-    
-        .custom-menu-item {
-            // background-color: $primary-color;
-            text-decoration: none;
-            color: $text-color;
-            font-weight: 500;
-            padding: 0.8rem 1.6rem;
-            border-radius: 35px;
-            transition: background-color 0.5s;
-        }
-    
-        .active {
-            background-color: white;
-            padding: 0.8rem 1.6rem;
-            border-radius: 35px;
-        }
+        transition: background-color 0.5s;
     }
-    </style>
+
+    .active {
+        background-color: white;
+        padding: 0.8rem 1.6rem;
+        border-radius: 35px;
+    }
+}
+</style>

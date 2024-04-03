@@ -56,7 +56,8 @@ body {
     opacity: 1;
 }
 
-.in-view.fadeup, .in-view .fadeup{ 
+.in-view.fadeup,
+.in-view .fadeup {
     transform: none;
     opacity: 1;
 }
@@ -81,9 +82,18 @@ body {
     border-radius: 35px;
 }
 
+a {
+    text-decoration: none;
+    color: #777777;
+
+    &:hover {
+        color: #999999;
+    }
+}
+
 @media screen and (max-width: 600px) {
 
     .custom-fs-big {
-      font-size: 3rem;  
+        font-size: 3rem;
     }
-  }
+}

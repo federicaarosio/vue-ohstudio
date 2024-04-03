@@ -1,9 +1,9 @@
 <template>
-    <section class="section fadeup pt-5">
+    <section class="section fadeup mt-5">
         <div class="container">
             <div class="row fadeup fade-delay">
                 <div class="col-12 col-md-7 mx-auto">
-                    <h1 class="text-center custom-fs-big mb-5">
+                    <h1 class="text-center custom-fs-big mb-5 pt-5">
                         An architectural studio designing spaces worldwide
                     </h1>
                 </div>
@@ -21,14 +21,28 @@
             </div>
         </div>
     </section>
-    <section class="section fadeup">
+    <section class="section fadeup mb-5">
         <div class="container">
             <div class="row">
                 <div v-for='image in imagesList' class="col-12 col-md-6 mb-4 position-relative">
                     <div class="position-absolute text-white custom-label">
                         {{ image.label }}
                     </div>
-                    <img :src="image.url" alt="immagine di prova" class="rounded-3 w-100">
+                    <img :src="image.url" :alt="image.label" class="rounded-3 w-100">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section fadeup ">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 col-md-5 mx-auto mb-5 p-5">
+                    <h2 class="text-center fs-1 fadeup fade-delay">
+                        Let's work together.
+                    </h2>
+                    <h2 class="text-center fs-1 fadeup fade-delay">
+                        <router-link to="/contact">Get in touch.</router-link>
+                    </h2>
                 </div>
             </div>
         </div>

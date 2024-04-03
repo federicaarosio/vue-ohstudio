@@ -41,7 +41,11 @@ export default {
 @use '../style/partials/variables' as *;
 
 .custom-nav {
-    background-color: $primary-color;
+    /* From https://css.glass */
+background: rgba(232, 229, 228, 0.5019607843137255);
+border-radius: 16px;
+backdrop-filter: blur(9.2px);
+-webkit-backdrop-filter: blur(9.2px);
     border-radius: 35px;
     padding: 0.8rem 0.25rem;
 

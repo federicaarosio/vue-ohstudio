@@ -6,6 +6,14 @@ import ContactPage from './pages/ContactPage.vue';
 
 const router = createRouter({
     history: createWebHistory(),
+    scrollBehavior: function (to, _from, savedPosition) {
+        if (savedPosition) {
+            return savedPosition;
+        } else {
+            console.log("moving to top of the page");
+            window.scrollTo(0, 0);
+        }
+    },
     routes: [
         {
             path: '/',
@@ -23,16 +31,6 @@ const router = createRouter({
             component: ContactPage
         },
     ],
-
-    scrollBehavior(to, from, savedPosition) {
-        if (savedPosition) {
-            // Se è disponibile una posizione salvata, torna a quella posizione
-            return savedPosition;
-        } else {
-            // Altrimenti, scorri fino all'inizio della pagina
-            return { x: 0, y: 0 };
-        }
-    },
 });
 
 

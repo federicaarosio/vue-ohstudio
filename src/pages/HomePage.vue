@@ -11,7 +11,7 @@
             <div class="row fadeup fade-delay">
                 <div
                     class="col-12 mx-auto d-flex flex-wrap justify-content-center align-items-center custom-fs-small custom-mb-big">
-                    <div class="me-3 text-center">
+                    <div class="me-3 text-center mb-1">
                         Expertise
                     </div>
                     <div v-for='expertise in expertiseList' class="custom-badge me-3 text-center mb-1">
@@ -24,11 +24,11 @@
     <section class="section fadeup mb-5">
         <div class="container">
             <div class="row">
-                <div v-for='image in imagesList' class="col-12 col-md-6 mb-4 position-relative">
+                <div v-for='image in imagesList' class="col-12 col-md-6 mb-4 position-relative image-container">
+                    <img :src="image.url" :alt="image.label" class="rounded-3 w-100">
                     <div class="position-absolute text-white custom-label">
                         {{ image.label }}
                     </div>
-                    <img :src="image.url" :alt="image.label" class="rounded-3 w-100">
                 </div>
             </div>
         </div>
@@ -139,15 +139,31 @@ export default {
 </script>
 <style lang="scss" scoped>
 .custom-label {
+    position: absolute;
     top: 20px;
     left: 30px;
-    font-size: 1.2rem;
+    z-index: 3;
+    background-color: rgba(51, 51, 51, 0.75);
+    color: white;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    padding: 0.35rem 0.9rem;
+    border-radius: 35px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.image-container:hover .custom-label {
+    opacity: 1;
 }
 
 img {
+    position: relative;
     height: 400px;
     object-fit: cover;
     object-position: center;
-
 }
 </style>

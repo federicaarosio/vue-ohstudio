@@ -47,7 +47,7 @@ border-radius: 16px;
 backdrop-filter: blur(9.2px);
 -webkit-backdrop-filter: blur(9.2px);
     border-radius: 35px;
-    padding: 0.8rem 0.25rem;
+    padding: 0.8rem 0.3rem;
 
     position: fixed;
     top: 0;

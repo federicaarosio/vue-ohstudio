@@ -11,7 +11,7 @@
             <div class="row fadeup fade-delay">
                 <div
                     class="col-7 mx-auto d-flex flex-wrap justify-content-center align-items-center fs-2 custom-mb-big">
-                    <div class="me-3 text-center">
+                    <div class="text-center">
                         your architectural partner
                     </div>
                 </div>
@@ -31,7 +31,7 @@
         <div class="container">
             <div class="row fadeup fade-delay">
                 <div class="col-12 mx-auto d-flex flex-wrap justify-content-center align-items-center custom-fs-small">
-                    <div class="custom-badge me-3 text-center mb-2">
+                    <div class="custom-badge text-center mb-2">
                         About
                     </div>
                 </div>
@@ -51,7 +51,7 @@
         <div class="container">
             <div class="row fadeup fade-delay">
                 <div class="col-12 mx-auto d-flex flex-wrap justify-content-center align-items-center custom-fs-small">
-                    <div class="custom-badge me-3 text-center mb-2">
+                    <div class="custom-badge text-center mb-2 fadeup fade-delay">
                         Experience
                     </div>
                 </div>
@@ -70,7 +70,7 @@
             <div class="row fadeup fade-delay text-center">
 
                 <div v-for="project in projectsList"
-                    class="col-4 d-flex flex-column align-items-center justify-content-center mb-5">
+                    class="col-12 col-md-6 col-lg-4 d-flex flex-column align-items-center justify-content-center mb-5">
                     <div class="date custom-fs-small mb-3 text-secondary">
                         {{ project.date }}
                     </div>

@@ -22,7 +22,18 @@ const router = createRouter({
             name: 'contact',
             component: ContactPage
         },
-    ]
+    ],
+
+    scrollBehavior(to, from, savedPosition) {
+        if (savedPosition) {
+            // Se è disponibile una posizione salvata, torna a quella posizione
+            return savedPosition;
+        } else {
+            // Altrimenti, scorri fino all'inizio della pagina
+            return { x: 0, y: 0 };
+        }
+    },
 });
+
 
 export { router }

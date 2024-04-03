@@ -41,6 +41,26 @@ body {
     font-family: 'NeueMontreal', Arial, sans-serif;
 }
 
+//Stile della sezione non intersecata
+.fadeup {
+    transform: translateY(50px);
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+
+//Stile della sezione dopo che è stata intersecata
+.in-view {
+    transform: none;
+    opacity: 1;
+}
+
+.in-view.fadeup, .in-view .fadeup{ 
+    transform: none;
+    opacity: 1;
+}
+
 .custom-mb-big {
     margin-bottom: $margin-bottom-big;
 }
@@ -60,3 +80,10 @@ body {
     background-color: $primary-color;
     border-radius: 35px;
 }
+
+@media screen and (max-width: 600px) {
+
+    .custom-fs-big {
+      font-size: 3rem;  
+    }
+  }

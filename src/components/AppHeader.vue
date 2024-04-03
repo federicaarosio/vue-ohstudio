@@ -1,8 +1,8 @@
 <template lang="">
 
     <div class="container">
-        <div class="row">
-            <div class="col-10 col-md-3 mx-auto d-flex justify-content-between text-center custom-nav custom-mb-big mt-5">
+        <div class="row custom-mb-big">
+            <div class="col-10 col-md-5 col-lg-3 mx-auto d-flex justify-content-between text-center custom-nav mt-4">
                 <div v-for="(link, index) in linkItems" :key="index" class="text-center" >
                     <router-link :to="{ name: link.routeName }" :class="{ 'active': $route.name === link.routeName }" class="custom-menu-item">
                         <span>{{ link.label }}</span>
@@ -43,21 +43,27 @@ export default {
 .custom-nav {
     background-color: $primary-color;
     border-radius: 35px;
-    padding: 0.9rem 0.25rem;
+    padding: 0.8rem 0.25rem;
+
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    z-index: 1000;
 
     .custom-menu-item {
-        // background-color: $primary-color;
         text-decoration: none;
         color: $text-color;
         font-weight: 500;
-        padding: 0.8rem 1.6rem;
+        padding: 0.7rem 1.6rem;
         border-radius: 35px;
         transition: background-color 0.5s;
     }
 
     .active {
         background-color: white;
-        padding: 0.8rem 1.6rem;
+        padding: 0.7rem 1.6rem;
         border-radius: 35px;
     }
 }
